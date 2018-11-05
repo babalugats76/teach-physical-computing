@@ -11,4 +11,4 @@ Below are the notes, links, resources, etc., from the following course:
 * Download [latest Raspbian Image](https://downloads.raspberrypi.org/raspbian_latest)
 * Download [Ether](https://www.balena.io/etcher/) for flashing to memory card
 
-![Etcher Burning Raspbian](./images/etcher-image-raspian.png)
+![""](/images/etcher-image-raspbian.png "Burning Image with Etcher")
