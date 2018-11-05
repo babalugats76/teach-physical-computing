@@ -26,4 +26,13 @@ If desired, perform the following steps **once flashing is complete**:
 4. Eject the sd card and place in your Raspberry Pi
 5. Connect the power to the micro-USB port labeled **PWR IN** and the port labeled **USB** to your computer
 6. Wait a couple of minutes (walk away)
-7. Determine the IP address of the Pi connected over USB via a command like `ping -4 raspberrypi.local` and write the result down somewhere
+7. Determine the IP address of the Pi connected over USB via a command like `ping -4 raspberrypi.local` and write the result down somewhere, e.g., 169.254.245.14
+
+![""](/images/ping-raspberrypi-local.png "Get the IP")
+
+8. Verify connectivity by attempting to connect using [PuTTY](https://www.putty.org/) or similar tool/executable
+
+
+
+
+
