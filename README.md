@@ -32,7 +32,10 @@ If desired, perform the following steps **once flashing is complete**:
 
 8. Verify connectivity by attempting to connect using [PuTTY](https://www.putty.org/) or similar tool/executable
 
+![""](/images/putty.png "Connect via PuTTY")
 
+![""](/images/trust-host-key.png "Trust the Host Key")
 
+![""](/images/logon.png "Logon")
 
 
