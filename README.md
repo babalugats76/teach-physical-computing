@@ -1,5 +1,3 @@
-# NOTES
-
 Below are the notes, links, resources, etc., from when I took the following course: 
 [TEACHING PHYSICAL COMPUTING WITH RASPBERRY PI AND PYTHON RASPBERRY PI FOUNDATION](https://www.futurelearn.com/courses/physical-computing-raspberry-pi-python).  I have added, or referred to, additional content related to the Raspberry Pi Zero, emulating SSH over USB, etc.
 
