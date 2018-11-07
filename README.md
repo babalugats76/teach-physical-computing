@@ -5,6 +5,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
 1. [Setting Up the Software](#software)
 2. [Connecting Over USB](#usb)
 3. [Connectivity](#connectivity)
+4. [VNC Setup](#vnc)
 
 <h2 name="software">Setting Up The Software</h2>
 
@@ -61,4 +62,25 @@ network={
 
 The above steps worked for a Pi Zero W running Raspbian Stretch.  For other configurations, see [SETTING WIFI UP VIA THE COMMAND LINE](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) 
 
+<h2 name="vnc">VNC Setup</h2>
 
+To be able to access a GUI on "headless" (no monitor) device, [VNC](https://www.realvnc.com/en/raspberrypi/) can be enabled.
+
+1. Update repository, `sudo apt-get update`, and make sure the latest VNC Server software is installed, `sudo apt-get install realvnc-vnc-server`
+2. Enable VNC using `sudo raspi-config`' enable by navigating to 'VNC' under 'Interfacing Options'
+3. Verify that the VNC process is running 
+
+```
+pi@raspberrypi:/etc/network $ ps -ef | grep vnc
+root     22133     1  0 02:19 ?        00:00:00 /usr/bin/vncserver-x11-serviced -fg
+root     22134 22133  0 02:19 ?        00:00:00 /usr/bin/vncserver-x11-core -service
+root     22158     1  0 02:19 ?        00:00:00 /usr/bin/vncagent service 14
+pi       22168     1  0 02:19 ?        00:00:01 /usr/bin/vncserverui service 17
+pi       22192 22168  0 02:19 ?        00:00:00 /usr/bin/vncserverui -statusicon 7
+```
+
+4. Run the `vncserver` and **annotate the IP address**
+5. Download and install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on computer you will be connecting from
+6. Launch VNC Viewer and connect to the IP annotated previously
+7. Complete setup steps, including localization, etc.
+8. Accept prompt to reboot
