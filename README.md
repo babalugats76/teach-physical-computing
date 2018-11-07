@@ -6,6 +6,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
 2. [Connecting Over USB](#usb)
 3. [Connectivity](#connectivity)
 4. [VNC Setup](#vnc)
+5. [Python Programs](#python)
 
 <h2 name="software">Setting Up The Software</h2>
 
@@ -93,3 +94,28 @@ pi       22192 22168  0 02:19 ?        00:00:00 /usr/bin/vncserverui -statusicon
 
 7. Complete setup steps, including localization, etc.
 8. Accept prompt to reboot
+
+<h2 name="python">Python Programs</h2>
+
+Examples assume Python 3.  From the command line, you may need to use `python3` to get the correct interpreter version.
+
+<h3>reaction.py</h3>
+
+```
+from time import sleep, time
+
+sleep(5)
+start = time()
+print('Quick, press the enter key')
+input()
+reactionTime = time() - start
+print('You took', reactionTime, 'seconds')
+```
+Example output:
+```
+pi@raspberrypi:~ $ python3 reaction.py
+Quick, press the enter key
+
+You took 0.4897763729095459 seconds
+```
+
