@@ -4,6 +4,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
 # TABLE OF CONTENTS
 1. [Setting Up the Software](#software)
 2. [Connecting Over USB](#usb)
+3. [Connectivity](#connectivity)
 
 <h2 name="software">Setting Up The Software</h2>
 
@@ -37,5 +38,27 @@ If desired, perform the following steps **once flashing is complete**:
 ![""](/images/trust-host-key.png "Trust the Host Key")
 
 ![""](/images/logon.png "Logon")
+
+<h2 name="connectivity">Connectivity</h2>
+
+These steps only apply to Pis with integrated wireless or a USB wireless dongle.
+1. Scan for available wireless networks: `sudo iwlist wlan0 scan`
+2. Generate psk by issuing: `wpa_passphrase "<SSID>"`
+3. Append the results to the bottom of the configuration file: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+  ssid="YOURSSID"
+  psk=<256-bit PSK here>
+}
+```
+
+4. Reconfigure the wireless interface: `wpa_cli -i wlan0 reconfigure`
+5. Verify connectivity via `ifconfig wlan0` and other networking-related executables, e.g., `ping www.colestock.com`
+
+The above steps worked for a Pi Zero W running Raspbian Stretch.  For other configurations, see [SETTING WIFI UP VIA THE COMMAND LINE](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) 
 
 
