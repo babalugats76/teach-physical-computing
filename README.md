@@ -82,5 +82,14 @@ pi       22192 22168  0 02:19 ?        00:00:00 /usr/bin/vncserverui -statusicon
 4. Run the `vncserver` and **annotate the IP address**
 5. Download and install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) on computer you will be connecting from
 6. Launch VNC Viewer and connect to the IP annotated previously
+
+![""](/images/vnc-viewer-ip.png "Enter IP")
+
+![""](/images/vnc-viewer-identity.png "Trust Identity")
+
+![""](/images/vnc-viewer-desktop-warnings.png "Desktop Initially Shows Warnings")
+
+![""](/images/vnc-viewer-desktop-setup.png "Desktop Prompts for Setup")
+
 7. Complete setup steps, including localization, etc.
 8. Accept prompt to reboot
