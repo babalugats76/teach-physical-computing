@@ -101,6 +101,9 @@ Examples assume Python 3.  From the command line, you may need to use `python3` 
 
 <h3>reaction.py</h3>
 
+Focuses on user input, system output, importing and using modules, declaring variables, and writing expressions using arithmetic operators
+
+Code:
 ```
 from time import sleep, time
 
