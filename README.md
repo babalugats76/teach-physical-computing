@@ -103,7 +103,7 @@ Examples assume Python 3.  From the command line, you may need to use `python3` 
 
 Focuses on user input, system output, importing and using modules, declaring variables, and writing expressions using arithmetic operators
 
-Code:
+**Code:**
 ```
 from time import sleep, time
 
@@ -114,7 +114,7 @@ input()
 reactionTime = time() - start
 print('You took', reactionTime, 'seconds')
 ```
-Example output:
+**Example output:**
 ```
 pi@raspberrypi:~ $ python3 reaction.py
 Quick, press the enter key
