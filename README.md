@@ -7,6 +7,8 @@ Below are the notes, links, resources, etc., from when I took the following cour
 3. [Connectivity](#connectivity)
 4. [VNC Setup](#vnc)
 5. [Python Programs](#python)
+   * [reaction.py](#reaction)
+   * [reactionLoop.py](#reaction-loop)
 
 <h2 name="software">Setting Up The Software</h2>
 
