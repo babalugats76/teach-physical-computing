@@ -99,7 +99,7 @@ pi       22192 22168  0 02:19 ?        00:00:00 /usr/bin/vncserverui -statusicon
 
 Examples assume Python 3.  From the command line, you may need to use `python3` to get the correct interpreter version.
 
-<h3>reaction.py</h3>
+<h3 name="reaction">reaction.py</h3>
 
 Focuses on user input, system output, importing and using modules, declaring variables, and writing expressions using arithmetic operators
 
@@ -114,6 +114,7 @@ input()
 reactionTime = time() - start
 print('You took', reactionTime, 'seconds')
 ```
+
 **Example output:**
 ```
 pi@raspberrypi:~ $ python3 reaction.py
@@ -122,3 +123,48 @@ Quick, press the enter key
 You took 0.4897763729095459 seconds
 ```
 
+<h3 name="reaction-loop">reactionLoop.py</h3>
+
+Focuses on use of finite looping using the `range()` function.
+
+**Code:**
+```
+from time import sleep, time
+
+totalTime = 0
+ATTEMPTS = 3
+
+print('You will have', ATTEMPTS, 'attempts', '\n')
+
+for i in range(ATTEMPTS):
+   sleep(3)
+   start = time()
+   print('Quick, press the enter key')
+   input()
+   reactionTime = time() - start
+   print('You took', round(reactionTime,3), 'seconds', '\n')
+   totalTime += reactionTime
+
+sleep(1)
+print('You averaged a', round(totalTime / ATTEMPTS, 3), 'response time')
+```
+
+**Example output:**
+```
+pi@raspberrypi:~ $ python3 reactionLoop.py
+You will have 3 attempts
+
+Quick, press the enter key
+
+You took 1.917 seconds
+
+Quick, press the enter key
+
+You took 0.964 seconds
+
+Quick, press the enter key
+
+You took 0.711 seconds
+
+You averaged a 1.198 response time
+```
