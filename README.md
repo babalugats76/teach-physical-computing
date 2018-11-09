@@ -9,6 +9,8 @@ Below are the notes, links, resources, etc., from when I took the following cour
 5. [Python Programs](#python)
    * [reaction.py](#reaction)
    * [reactionLoop.py](#reaction-loop)
+6. [Physical Computing](#physical)
+   * [GPIO](#gpio)
 
 <h2 name="software">Setting Up The Software</h2>
 
@@ -170,3 +172,12 @@ You took 0.711 seconds
 
 You averaged a 1.198 response time
 ```
+
+<h2 name="physical">Physical Computing</h2>
+
+<h3 name="gpio">GPIO</h3>
+
+The **General Purpose Input Output** pin of the Raspberry Pi open up the world of physical computing.
+
+We can refer to [this website](http://pinout.xyz/) or the figure below to determing **GPIO Pin Numbering**.
+
