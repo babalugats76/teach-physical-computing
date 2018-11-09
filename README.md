@@ -182,3 +182,6 @@ The **General Purpose Input Output** pins of the Raspberry Pi open up the world 
 We can refer to [this website](http://pinout.xyz/) or the figure below to determing **GPIO Pin Numbering**.
 
 ![""](/images/gpio-numbers-pi2.png "GPIO numbering for the RPi2")
+
+The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspberrypi.org/en/) related to physical computing, etc.
+
