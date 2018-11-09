@@ -177,7 +177,7 @@ You averaged a 1.198 response time
 
 <h3 name="gpio">GPIO</h3>
 
-The **General Purpose Input Output** pin of the Raspberry Pi open up the world of physical computing.
+The **General Purpose Input Output** pins of the Raspberry Pi open up the world of physical computing.
 
 We can refer to [this website](http://pinout.xyz/) or the figure below to determing **GPIO Pin Numbering**.
 
