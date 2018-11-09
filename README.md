@@ -11,6 +11,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
    * [reactionLoop.py](#reaction-loop)
 6. [Physical Computing](#physical)
    * [GPIO](#gpio)
+   * [Building a Simple Circuit](#circuit)
 
 <h2 name="software">Setting Up The Software</h2>
 
@@ -184,4 +185,13 @@ We can refer to [this website](http://pinout.xyz/) or the figure below to determ
 ![""](/images/gpio-numbers-pi2.png "GPIO numbering for the RPi2")
 
 The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspberrypi.org/en/) related to physical computing, etc.
+
+<h3 name="circuit">Building a Simple Circuit</h3>
+
+**Inventory**:
+
+**Diagram (Ground Missing)**
+
+Once everything is working, move the 3.3V wire to any of the available numbered GPIO pins in order to allow use to program the light.
+
 
