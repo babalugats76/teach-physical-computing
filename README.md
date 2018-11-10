@@ -190,12 +190,17 @@ The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspbe
 
 The long leg of the LED goes in the left side.  The 330 ohm resistor goes on the negative side.  The ground jumper goes to the negative side and the power (3.3V) OR numbered signaling GPIO pin goes to the positive side.
 
+**Supplies**:
+
 ![""](/images/simple-circuit-supplies.png "Simple Circuit Supply List")
 
+**Diagram (minus ground)**:
 ![""](/images/groundmissing.png "Circuit Without the Ground")
 
+**Complete Circuit**:
 ![""](/images/circuitcurrentflow.gif "Completed Circuit")
 
 **Example**:
+![""](/images/pi-zero-example-circuit.jpg "Real-World Example using Pi Zero")
 
 Once everything is working, move the 3.3V wire to any of the available numbered GPIO pins, e.g., 17, in order to allow use to program the light.
