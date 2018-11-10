@@ -206,4 +206,8 @@ The long leg of the LED goes in the left side.  The 330 ohm resistor goes on the
 
 ![""](/images/pi-zero-example-circuit.jpg "Real-World Example using Pi Zero")
 
+**Breadboard (close-up)**
+
+![""](/images/circuit-breadboard-close-up.jpg "Close-up Look at Circuit")
+
 Once everything is working, move the 3.3V wire to any of the available numbered GPIO pins, e.g., 17, in order to allow use to program the light.
