@@ -188,7 +188,7 @@ The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspbe
 
 <h3 name="circuit">Building a Simple Circuit</h3>
 
-The long leg of the LED goes in the left side.  The 330 ohm resistor goes on the negative side.  The ground jumper goes to the negative side and the power (3.3V) OR numbered signaling GPIO pin goes to the positive side.
+The long leg of the LED goes in the left side.  The 330 ohm resistor goes on the negative side.  The ground jumper goes to the negative side and the power (3.3V) OR numbered signaling GPIO pin goes to the positive side.  Reference [this instructional video](http://static.colestock.com/videos/rpi-building-a-simple-circuit.mp4).
 
 **Supplies**:
 
