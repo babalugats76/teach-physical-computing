@@ -191,7 +191,7 @@ The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspbe
 **Inventory**:
 ![""](/images/simple-circuit-supplies.png "Simple Circuit Supply List")
 
-**Diagram (Ground Missing)**:
+**Diagram**:
 ![""](/images/groundmissing.png "Circuit Without the Ground")
 
 **Diagram**:
