@@ -189,9 +189,16 @@ The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspbe
 <h3 name="circuit">Building a Simple Circuit</h3>
 
 **Inventory**:
+![""](/images/simple-circuit-supplies.png "Simple Circuit Supply List")
 
-**Diagram (Ground Missing)**
+**Diagram (Ground Missing)**:
+![""](/images/groundmissing.png "Circuit Without the Ground")
 
-Once everything is working, move the 3.3V wire to any of the available numbered GPIO pins in order to allow use to program the light.
+**Diagram**:
+![""](/images/circuitcurrentflow.png "Completed Circuit")
+
+**Example**:
+
+Once everything is working, move the 3.3V wire to any of the available numbered GPIO pins, e.g., 17, in order to allow use to program the light.
 
 
