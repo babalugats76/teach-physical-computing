@@ -192,7 +192,7 @@ The Raspberry Pi Foundation also has ideas of [projects](https://projects.raspbe
 
 ![""](/images/groundmissing.png "Circuit Without the Ground")
 
-![""](/images/circuitcurrentflow.png "Completed Circuit")
+![""](/images/circuitcurrentflow.gif "Completed Circuit")
 
 **Example**:
 
