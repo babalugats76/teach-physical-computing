@@ -6,7 +6,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
   - [Setting Up the Software](#software)
   - [Connecting Over USB](#usb)
   - [Connectivity](#connectivity)
-  - [VNC Setup](#vnc)
+  - [VNC](#vnc)
 - [Basic Python Programs](#python)
   - [reaction.py](#reaction)
   - [reaction-loop.py](#reaction-loop)
@@ -74,7 +74,7 @@ network={
 
 The above steps worked for a Pi Zero W running Raspbian Stretch.  For other configurations, see [SETTING WIFI UP VIA THE COMMAND LINE](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) 
 
-<h3 name="vnc">VNC Setup</h3>
+<h3 name="vnc">VNC</h3>
 
 To be able to access a GUI on "headless" (no monitor) device, [VNC](https://www.realvnc.com/en/raspberrypi/) can be enabled.
 
