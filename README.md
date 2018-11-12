@@ -222,6 +222,10 @@ Once everything is working, move the 3.3V wire to any of the available numbered 
 
 In order to programmatically control the LED in our circuit, we can using the [gpiozero](https://gpiozero.readthedocs.io/en/latest/) library from the Raspberry Pi Foundation.
 
+Making the LED blink is straightforward and demonstrates how Python can be used as a sort of switch to complete the circuit.  The programmer can simply wrap API function calls or use pre-authored abstractions to interact with the LED:
+
+![""](/images/blinky-blinky.gif "Program the LED - Make it Blink")
+
 <h4 name="blink">blink.py</h4>
 
 ```
