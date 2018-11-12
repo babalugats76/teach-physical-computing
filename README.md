@@ -2,20 +2,20 @@ Below are the notes, links, resources, etc., from when I took the following cour
 [TEACHING PHYSICAL COMPUTING WITH RASPBERRY PI AND PYTHON RASPBERRY PI FOUNDATION](https://www.futurelearn.com/courses/physical-computing-raspberry-pi-python).  I have added, or referred to, additional content related to the Raspberry Pi Zero, emulating SSH over USB, etc.
 
 # TABLE OF CONTENTS
-** [Setup](#setup)
-  ** [Setting Up the Software](#software)
-  ** [Connecting Over USB](#usb)
-  ** [Connectivity](#connectivity)
-  ** [VNC Setup](#vnc)
-** Basic Python Programs](#python)
-  ** [reaction.py](#reaction)
-  ** [reactionLoop.py](#reaction-loop)
-** [Physical Computing](#physical)
-   ** [GPIO Pins](#gpio)
-   ** [Building a Simple Circuit](#circuit)
-   ** [Blinky, Blinky Lights](#blinky)
-     ** [blink.py](#blink)
-     ** [blink-api.py](#blink-api) 
+- [Setup](#setup)
+  - [Setting Up the Software](#software)
+  - [Connecting Over USB](#usb)
+  - [Connectivity](#connectivity)
+  - [VNC Setup](#vnc)
+- Basic Python Programs](#python)
+  - [reaction.py](#reaction)
+  - [reactionLoop.py](#reaction-loop)
+- [Physical Computing](#physical)
+   - [GPIO Pins](#gpio)
+   - [Building a Simple Circuit](#circuit)
+   - [Blinky, Blinky Lights](#blinky)
+     - [blink.py](#blink)
+     - [blink-api.py](#blink-api) 
 
 <h2 name="setup">Setup</h2>
 
