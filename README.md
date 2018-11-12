@@ -7,9 +7,9 @@ Below are the notes, links, resources, etc., from when I took the following cour
   - [Connecting Over USB](#usb)
   - [Connectivity](#connectivity)
   - [VNC Setup](#vnc)
-- Basic Python Programs](#python)
+- [Basic Python Programs](#python)
   - [reaction.py](#reaction)
-  - [reactionLoop.py](#reaction-loop)
+  - [reaction-loop.py](#reaction-loop)
 - [Physical Computing](#physical)
    - [GPIO Pins](#gpio)
    - [Building a Simple Circuit](#circuit)
@@ -134,7 +134,7 @@ Quick, press the enter key
 You took 0.4897763729095459 seconds
 ```
 
-<h3 name="reaction-loop">reactionLoop.py</h3>
+<h3 name="reaction-loop">reaction-loop.py</h3>
 
 Focuses on use of finite looping using the `range()` function.
 
@@ -162,7 +162,7 @@ print('You averaged a', round(totalTime / ATTEMPTS, 3), 'response time')
 
 **Example output:**
 ```
-pi@raspberrypi:~ $ python3 reactionLoop.py
+pi@raspberrypi:~ $ python3 reaction-loop.py
 You will have 3 attempts
 
 Quick, press the enter key
