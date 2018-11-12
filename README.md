@@ -2,18 +2,24 @@ Below are the notes, links, resources, etc., from when I took the following cour
 [TEACHING PHYSICAL COMPUTING WITH RASPBERRY PI AND PYTHON RASPBERRY PI FOUNDATION](https://www.futurelearn.com/courses/physical-computing-raspberry-pi-python).  I have added, or referred to, additional content related to the Raspberry Pi Zero, emulating SSH over USB, etc.
 
 # TABLE OF CONTENTS
-1. [Setting Up the Software](#software)
-2. [Connecting Over USB](#usb)
-3. [Connectivity](#connectivity)
-4. [VNC Setup](#vnc)
-5. [Python Programs](#python)
-   * [reaction.py](#reaction)
-   * [reactionLoop.py](#reaction-loop)
-6. [Physical Computing](#physical)
-   * [GPIO](#gpio)
-   * [Building a Simple Circuit](#circuit)
+** [Setup](#setup)
+  ** [Setting Up the Software](#software)
+  ** [Connecting Over USB](#usb)
+  ** [Connectivity](#connectivity)
+  ** [VNC Setup](#vnc)
+** Basic Python Programs](#python)
+  ** [reaction.py](#reaction)
+  ** [reactionLoop.py](#reaction-loop)
+** [Physical Computing](#physical)
+   ** [GPIO Pins](#gpio)
+   ** [Building a Simple Circuit](#circuit)
+   ** [Blinky, Blinky Lights](#blinky)
+     ** [blink.py](#blink)
+     ** [blink-api.py](#blink-api) 
 
-<h2 name="software">Setting Up The Software</h2>
+<h2 name="setup">Setup</h2>
+
+<h3 name="software">Setting Up The Software</h3>
 
 1. Download [latest Raspbian Image](https://downloads.raspberrypi.org/raspbian_latest)
 2. Download [Ether](https://www.balena.io/etcher/) for flashing to memory card
@@ -23,7 +29,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
 
 4. Eject SD card
 
-<h2 name="usb">Connecting Over USB</h2>
+<h3 name="usb">Connecting Over USB</h3>
 
 Additional configuration steps are needed to be able to **emulate SSH over USB**.  I originally learned to do this from [this GitHub Gist](https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a).
 
@@ -46,7 +52,7 @@ If desired, perform the following steps **once flashing is complete**:
 
 ![""](/images/logon.png "Logon")
 
-<h2 name="connectivity">Connectivity</h2>
+<h3 name="connectivity">Connectivity</h3>
 
 These steps only apply to Pis with integrated wireless or a USB wireless dongle.
 1. Scan for available wireless networks: `sudo iwlist wlan0 scan`
@@ -68,7 +74,7 @@ network={
 
 The above steps worked for a Pi Zero W running Raspbian Stretch.  For other configurations, see [SETTING WIFI UP VIA THE COMMAND LINE](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) 
 
-<h2 name="vnc">VNC Setup</h2>
+<h3 name="vnc">VNC Setup</h3>
 
 To be able to access a GUI on "headless" (no monitor) device, [VNC](https://www.realvnc.com/en/raspberrypi/) can be enabled.
 
@@ -100,7 +106,7 @@ pi       22192 22168  0 02:19 ?        00:00:00 /usr/bin/vncserverui -statusicon
 7. Complete setup steps, including localization, etc.
 8. Accept prompt to reboot
 
-<h2 name="python">Python Programs</h2>
+<h2 name="python">Basic Python Programs</h2>
 
 Examples assume Python 3.  From the command line, you may need to use `python3` to get the correct interpreter version.
 
@@ -176,7 +182,7 @@ You averaged a 1.198 response time
 
 <h2 name="physical">Physical Computing</h2>
 
-<h3 name="gpio">GPIO</h3>
+<h3 name="gpio">GPIO Pins</h3>
 
 The **General Purpose Input Output** pins of the Raspberry Pi open up the world of physical computing.
 
@@ -211,3 +217,36 @@ The long leg of the LED goes in the left side.  The 330 ohm resistor goes on the
 ![""](/images/circuit-breadboard-close-up.jpg "Close-up Look at Circuit")
 
 Once everything is working, move the 3.3V wire to any of the available numbered GPIO pins, e.g., 17, in order to allow use to program the light.
+
+<h3 name="blinky">Blinky Lights</h3>
+
+In order to programmatically control the LED in our circuit, we can using the [gpiozero](https://gpiozero.readthedocs.io/en/latest/) library from the Raspberry Pi Foundation.
+
+<h4 name="blink">blink.py</h4>
+
+```
+from gpiozero import LED
+from time import sleep
+
+# Red LED is attached to GPIO #17
+led = LED(17)
+
+# Make led blink
+while True:
+  led.on()
+  sleep(0.5)
+  led.off()
+  sleep(0.2)
+```
+
+<h4 name="blink-api"'>blink-api.py</h4>
+                     
+```
+from gpiozero import LED
+
+# Red LED is attached to GPIO #17
+led = LED(17)
+
+# Make light blink using API abstraction
+led.blink(0.5, 0.2, None, False)
+```
