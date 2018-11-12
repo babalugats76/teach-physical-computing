@@ -13,7 +13,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
 - [Physical Computing](#physical)
    - [GPIO Pins](#gpio)
    - [Building a Simple Circuit](#circuit)
-   - [Blinky, Blinky Lights](#blinky)
+   - [Blinky Lights](#blinky)
      - [blink.py](#blink)
      - [blink-api.py](#blink-api) 
 
