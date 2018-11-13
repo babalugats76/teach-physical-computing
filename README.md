@@ -270,7 +270,6 @@ Here are closeups of the new circuit:
 ```
 from gpiozero import LED
 
-# Red LED is attached to GPIO #17
 red, yellow = LED(17), LED(18)
 
 # Make light blink using API abstraction
