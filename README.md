@@ -16,6 +16,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
    - [Blinky Lights](#blinky)
      - [blink.py](#blink)
      - [blink-api.py](#blink-api) 
+     - [two-leds.py](#two-leds)
 
 <h2 name="setup">Setup</h2>
 
@@ -253,4 +254,23 @@ led = LED(17)
 
 # Make light blink using API abstraction
 led.blink(0.5, 0.2, None, False)
+```
+<h4 name="two-leds">two-leds.py</h4>
+
+In order to support multiple LED's, the breadboard, etc. needs to be rewired similar to [this example](https://projects.drogon.net/wp-content/uploads/2012/06/example3.jpg)
+
+Here are closeups of the new circuit:
+
+
+
+```
+from gpiozero import LED
+
+# Red LED is attached to GPIO #17
+red, yellow = LED(17), LED(18)
+
+# Make light blink using API abstraction
+while True:
+  red.blink(0.5, 0.2, 2, False)
+  yellow.blink(0.5, 0.2, 2, False)
 ```
