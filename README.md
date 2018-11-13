@@ -261,7 +261,11 @@ In order to support multiple LED's, the breadboard, etc. needs to be rewired sim
 
 Here are closeups of the new circuit:
 
+![""](/images/two-leds-breadboard.jpg "Breadboard")
 
+![""](/images/two-leds-rpi.jpg "GPIO")
+
+![""](/images/two-leds.gif "Final Product")
 
 ```
 from gpiozero import LED
