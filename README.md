@@ -17,6 +17,8 @@ Below are the notes, links, resources, etc., from when I took the following cour
      - [blink.py](#blink)
      - [blink-api.py](#blink-api) 
      - [two-leds.py](#two-leds)
+   - [Adding a Button](#button)
+     - [push-me.py](#push-me)
 
 <h2 name="setup">Setup</h2>
 
@@ -276,4 +278,37 @@ red, yellow = LED(17), LED(18)
 while True:
   red.blink(0.5, 0.2, 2, False)
   yellow.blink(0.5, 0.2, 2, False)
+```
+
+<h3 name="button">Adding a Button</h3>
+
+We can add a button to serve as a physical switch which closes the circuit. Reference [Button](https://gpiozero.readthedocs.io/en/latest/api_input.html#button) in the gpiozero API reference. 
+
+**Close up of Breadboard (using breakout)**
+
+![""](/images/push-me-breadboard.jpg "Breadboard")
+
+**Final Result**
+
+![""](/images/push-me.gif "Final Product")
+
+<h4 name="push-me">push-me.py</h4>
+
+```
+from gpiozero import LED, Button
+
+led = LED(21)
+btn = Button(19)
+
+def blink():
+  print("Blinky, Blinky")
+  led.blink(0.2, 0.1, 10, False)
+
+# function to call when button pressed
+btn.when_pressed = blink
+
+# Wait for button press
+print("Push me!")
+while True:
+  btn.wait_for_press
 ```
