@@ -19,6 +19,7 @@ Below are the notes, links, resources, etc., from when I took the following cour
      - [two-leds.py](#two-leds)
    - [Adding a Button](#button)
      - [push-me.py](#push-me)
+     - [reaction-game.py](#reaction-game)
 
 <h2 name="setup">Setup</h2>
 
@@ -311,4 +312,41 @@ btn.when_pressed = blink
 print("Push me!")
 while True:
   btn.wait_for_press
+```
+<h4 name="reaction-game">reaction-game.py</h4>
+
+Once the button has been added, we can create a reaction game that:
+* Waits a random period of time before turning on the LED
+* Listens for when the user presses the button
+* Calculates and reports the user's reaction time
+
+**Code:**
+```
+from gpiozero import LED, Button
+from time import time, sleep
+from random import randint
+
+led = LED(21)
+btn = Button(19)
+
+# Wait for button press
+print("See the light, press the button")
+while True:
+  secs = randint(1,10)
+  sleep(secs)
+  led.on()
+  start = time()
+  btn.wait_for_press()
+  end = time()
+  led.off()
+  print('Reaction time','{:01.3f}'.format(end-start),'seconds')
+```
+
+**Example Output**
+```
+pi@raspberrypi:~ $ python3 reaction-game.py
+See the light, press the button
+Reaction time 0.241 seconds
+Reaction time 0.465 seconds
+Reaction time 2.406 seconds
 ```
