@@ -355,9 +355,9 @@ Reaction time 2.406 seconds
 
 <h3 name="pir">PIR Motion Detector</h3>
 
-Motion can be detected by the RPi through use of a PIR module (Passive Infrared Sensor).  
-
+Motion can be detected by the RPi through use of a PIR module (Passive Infrared Sensor). I used the [HC-SR501](https://www.mpja.com/download/31227sc.pdf) and referred to the [Adafruit Documentation](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor?view=all) as well as [this article](https://electrosome.com/pir-motion-sensor-hc-sr501-raspberry-pi/).    
 Wiring up the module is quite simple:
+
 ![""](/images/pir-motion-sensor-circuit.jpg "PIR Circuit")
 
 <h4 name="detect-motion">detect-motion.py</h4>
