@@ -20,6 +20,8 @@ Below are the notes, links, resources, etc., from when I took the following cour
    - [Adding a Button](#button)
      - [push-me.py](#push-me)
      - [reaction-game.py](#reaction-game)
+   - [PIR Motion Detector](#pir)
+     - [detect-motion.py](#detect-motion)
 
 <h2 name="setup">Setup</h2>
 
@@ -349,4 +351,54 @@ See the light, press the button
 Reaction time 0.241 seconds
 Reaction time 0.465 seconds
 Reaction time 2.406 seconds
+```
+
+<h3 name="pir">PIR Motion Detector</h3>
+
+Motion can be detected by the RPi through use of a PIR module (Passive Infrared Sensor).  
+
+Wiring up the module is quite simple:
+![""](/images/pir-motion-sensor-circuit.jpg "PIR Circuit")
+
+<h4 name="detect-motion">detect-motion.py</h4>
+
+**Code:**
+```
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+
+PIR_PIN = 21
+detections = 0
+
+GPIO.setup(PIR_PIN, GPIO.IN)
+
+try:
+  print("PIR Module Test (Ctrl + C to exit)")
+  time.sleep(2)
+  print("Ready")
+
+  while True:
+    if GPIO.input(PIR_PIN):
+      detections += 1
+      print('Motion Detected %3d' % (detections))
+      time.sleep(2)
+    time.sleep(0.5)
+
+except KeyboardInterrupt:
+  print(" Exiting...")
+  GPIO.cleanup()
+```
+
+**Example Output**
+
+```
+pi@raspberrypi:~ $ python3 detect-motion.py
+PIR Module Test (Ctrl + C to exit)
+Ready
+Motion Detected   1
+Motion Detected   2
+Motion Detected   3
+^C Exiting...
 ```
